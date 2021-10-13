@@ -1,34 +1,37 @@
-<div class="container">
-  <div class="row">
-    <div class=" col-4 col-sm-6 col-md-8">
-      <div class="justify-content-center">
-        <mat-toolbar>
-          <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-            <mat-icon>menu</mat-icon>
-          </button>
-          <span>My App</span>
-          <span class="example-spacer"></span>
-          <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-            <mat-icon>favorite</mat-icon>
-          </button>
-          <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-            <mat-icon>share</mat-icon>
-          </button>
-        </mat-toolbar>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <mat-list role="list">
+      <mat-list-item role="listitem" ><button mat-button (click)="drawer.toggle()"> Home </button></mat-list-item>
+      <mat-list-item role="listitem"><button mat-button (click)="drawer.toggle()"> Dashboard </button></mat-list-item>
+      <mat-list-item role="listitem"><button mat-button (click)="drawer.toggle()"> About </button></mat-list-item>
+    </mat-list>
+  </mat-drawer>
 
-      </div>
-    </div>
-  </div>
-</div>
+  <div class="example-sidenav-content">
+    <mat-toolbar color="primary">
+      <button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Amir developer</span>
+      <span class="example-spacer"></span>
+      <button id="login" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>login</mat-icon>
+      </button>
+      <button mat-button class="button-air">
+        بلیط هواپیما
+      </button>
+      <button mat-button class="button-air">رزرو هتل</button>
+      <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button> -->
+    </mat-toolbar>
 
-<br>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-8 col-md-6 ">
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Leave a comment</mat-label>
-        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-      </mat-form-field>
-    </div>
   </div>
-</div>
+
+  <section>
+    <div id="mainContent">
+      <h3>Hello Main Content</h3>
+    </div>
+  </section>
+
+</mat-drawer-container>
