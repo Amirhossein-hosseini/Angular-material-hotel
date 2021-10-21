@@ -1,37 +1,42 @@
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-    <mat-list role="list">
-      <mat-list-item role="listitem" ><button mat-button (click)="drawer.toggle()"> Home </button></mat-list-item>
-      <mat-list-item role="listitem"><button mat-button (click)="drawer.toggle()"> Dashboard </button></mat-list-item>
-      <mat-list-item role="listitem"><button mat-button (click)="drawer.toggle()"> About </button></mat-list-item>
-    </mat-list>
-  </mat-drawer>
+<div class="position-reletive">
+  <mat-drawer-container  autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="over" [position]="'start'" [autoFocus]="'true'">
+      <mat-list role="list">
+        <mat-list-item role="listitem"><button mat-button (click)="drawer.toggle()"> ورود/ ثبت نام </button>
+        </mat-list-item>
+        <mat-list-item role="listitem"><button mat-button (click)="drawer.toggle()"> بلیط هواپیما <mat-icon>flight
+            </mat-icon></button></mat-list-item>
+        <mat-list-item role="listitem"><button mat-button (click)="drawer.toggle()"> رزرو هتل <mat-icon>local_hotel
+            </mat-icon></button></mat-list-item>
+      </mat-list>
+    </mat-drawer>
 
-  <div class="example-sidenav-content">
-    <mat-toolbar color="primary">
-      <button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span>Amir developer</span>
-      <span class="example-spacer"></span>
-      <button id="login" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>login</mat-icon>
-      </button>
-      <button mat-button class="button-air">
-        بلیط هواپیما
-      </button>
-      <button mat-button class="button-air">رزرو هتل</button>
-      <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
-      </button> -->
-    </mat-toolbar>
+    <div class="example-sidenav-content">
+      <mat-toolbar color="primary">
 
-  </div>
+        <button class="user-acount" mat-icon-button aria-label="Example icon-button with heart icon">
+          <mat-icon>account_circle</mat-icon>
+        </button>
 
-  <section>
-    <div id="mainContent">
-      <h3>Hello Main Content</h3>
-    </div>
-  </section>
+        <button (click)="drawer.toggle()" mat-icon-button class="menu" aria-label="icon">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span class="span">esafar</span>
+        <span class="example-spacer"></span>
+        <button class="login" mat-icon-button aria-label="Example icon-button with heart icon">
+          <mat-icon>login</mat-icon>
+        </button>
 
+        <button mat-button class="button-air">
+          بلیط هواپیما
+        </button>
+        <button mat-button class="button-air">رزرو هتل</button>
+
+      </mat-toolbar>
+      <div class="container-fluid">
+        <router-outlet></router-outlet>
+        <app-home-hotel></app-home-hotel>
+        <app-tabest></app-tabest>
+      </div>
+      </div>
 </mat-drawer-container>

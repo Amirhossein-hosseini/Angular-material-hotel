@@ -8,6 +8,10 @@ import{MatIconModule} from '@angular/material/icon'
 import {MatSidenavModule} from '@angular/material/sidenav'
 import {MatListModule} from '@angular/material/list'
 import {MatButtonModule} from '@angular/material/button'
+import {MatStepperModule} from '@angular/material/stepper'
+
+import {MatSnackBarModule} from '@angular/material/snack-bar'
+
 const Model = [
 MatCardModule,
 MatToolbarModule,
@@ -16,7 +20,9 @@ MatInputModule,
 MatIconModule,
 MatSidenavModule,
 MatListModule,
-MatButtonModule
+MatButtonModule,
+MatStepperModule,
+MatSnackBarModule
 
 ]
 

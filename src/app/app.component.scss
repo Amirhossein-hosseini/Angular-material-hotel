@@ -1,27 +1,169 @@
+// * ::after,
+// ::before {
+//   box-sizing: border-box;
+// }
+
+
+
+
+
+.position-reletive{
+  position: relative;
+}
+
 .example-container {
   width: 100%;
   height: 100%;
+
 }
+
 
 .example-sidenav {
   padding: 20px;
+
 }
 
 .example-spacer {
   flex: 1 1 auto;
 }
 
-#mainContent{
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
+#mainContent {
+  // display: flex;
+  // height: 100%;
+  // align-items: center;
+  // justify-content: center;
+
 }
 
-.button-air{
-  right: 35rem;
+.button-air {
+  right: 37rem;
 }
 
-#login{
+
+
+.user-acount {}
+
+.login {
   left: 10rem;
+
 }
+
+@media only screen and (max-width: 576px) and (max-width: 767.98px) {
+  .example-sidenav {
+    overflow: auto;
+    position: fixed;
+    top: 55px;
+    left: 0;
+    visibility: hidden;
+    will-change: transform, visibility;
+    z-index: 1029;
+    width: 100%;
+    max-width: 280px;
+    height: calc(100% - 4rem);
+    // background: #fff;
+    transition: transform .25s cubic-bezier(.4, 0, .2, 1), visibility 0s linear .25s;
+    transform: translateX(-101%);
+    height: 100%;
+  }
+  .login {
+    display: none;
+  }
+
+  .span {
+    margin-left: 8rem;
+  }
+
+  .button-air {
+    display: none;
+  }
+  .menu{
+    left: 23rem;
+  }
+  .user-acount {
+
+  }
+}
+
+
+
+
+
+// .example-sidenav {
+//   position: relative;
+//   display: flex;
+//   flex-direction: column;
+//   min-width: 0;
+//   word-wrap: break-word;
+//   background-color: #fff;
+//   background-clip: border-box;
+//   border: 1px solid #cfd8cf;
+//   height: 100%;
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @media only screen and (min-width: 992px) {
+
+//   //  .icon{
+//   //    display: inline-block;
+//   //  }
+//   .button-air {
+//     display: block;
+//   }
+
+//   .user-acount {
+//     display: none;
+//   }
+
+
+
+
+// }
+
+
+
+@media screen and (min-width: 1200px)  {
+  .login {
+    display: block;
+
+  }
+
+
+  .user-acount {
+    display: none;
+  }
+
+  .span {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+}
+
+
+.mat-drawer.mat-drawer-side {
+  z-index: 2;
+  position: fixed;
+}
+
+
+.user-acount {
+  // float: right;
+
+}
+
+
+
