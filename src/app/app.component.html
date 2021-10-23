@@ -1,42 +1,59 @@
-<div class="position-reletive">
-  <mat-drawer-container  autosize>
-    <mat-drawer #drawer class="example-sidenav" mode="over" [position]="'start'" [autoFocus]="'true'">
-      <mat-list role="list">
-        <mat-list-item role="listitem"><button mat-button (click)="drawer.toggle()"> ورود/ ثبت نام </button>
-        </mat-list-item>
-        <mat-list-item role="listitem"><button mat-button (click)="drawer.toggle()"> بلیط هواپیما <mat-icon>flight
-            </mat-icon></button></mat-list-item>
-        <mat-list-item role="listitem"><button mat-button (click)="drawer.toggle()"> رزرو هتل <mat-icon>local_hotel
-            </mat-icon></button></mat-list-item>
-      </mat-list>
-    </mat-drawer>
+<mat-drawer-container autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="over" [position]="'start'" [autoFocus]="'true'">
+    <mat-list role="list">
+      <mat-list-item role="listitem"><button mat-button (click)="drawer.toggle()"> ورود/ ثبت نام </button>
+      </mat-list-item>
+      <mat-list-item role="listitem"><button mat-button (click)="drawer.toggle()"> بلیط هواپیما <mat-icon>flight
+          </mat-icon></button></mat-list-item>
+      <mat-list-item role="listitem"><button mat-button (click)="drawer.toggle()"> رزرو هتل <mat-icon>local_hotel
+          </mat-icon></button></mat-list-item>
+    </mat-list>
+  </mat-drawer>
 
-    <div class="example-sidenav-content">
-      <mat-toolbar color="primary">
+  <div class="example-sidenav-content">
+    <mat-toolbar color="primary">
 
-        <button class="user-acount" mat-icon-button aria-label="Example icon-button with heart icon">
-          <mat-icon>account_circle</mat-icon>
-        </button>
+      <button class="user-acount" mat-icon-button aria-label="Example icon-button with heart icon">
+        <mat-icon>account_circle</mat-icon>
+      </button>
 
-        <button (click)="drawer.toggle()" mat-icon-button class="menu" aria-label="icon">
-          <mat-icon>menu</mat-icon>
-        </button>
-        <span class="span">esafar</span>
-        <span class="example-spacer"></span>
-        <button class="login" mat-icon-button aria-label="Example icon-button with heart icon">
-          <mat-icon>login</mat-icon>
-        </button>
+      <button (click)="drawer.toggle()" mat-icon-button class="menu" aria-label="icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="span">esafar</span>
+      <span class="example-spacer"></span>
+      <button class="login" mat-icon-button aria-label="Example icon-button with heart icon">
+        <mat-icon>login</mat-icon>
+      </button>
 
-        <button mat-button class="button-air">
-          بلیط هواپیما
-        </button>
-        <button mat-button class="button-air">رزرو هتل</button>
+      <button mat-button class="button-air" [routerLink]="['air']">
+        بلیط هواپیما
+      </button>
+      <button mat-button class="button-air">رزرو هتل</button>
 
-      </mat-toolbar>
-      <div class="container-fluid">
+
+    </mat-toolbar>
+</div>
+
+  <div class="container-fluid">
+<router-outlet></router-outlet>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class=" navbar-top">
+          <div class="home-page-baner "></div>
+        </div>
+      </div>
+    </div>
+
+<app-home-hotel></app-home-hotel>
+    <div class="row">
+      <div class="col-sm-12">
         <router-outlet></router-outlet>
-        <app-home-hotel></app-home-hotel>
-        <app-tabest></app-tabest>
+        <!-- <app-home-hotel></app-home-hotel> -->
+
       </div>
-      </div>
+
+    </div>
+  </div>
+
 </mat-drawer-container>

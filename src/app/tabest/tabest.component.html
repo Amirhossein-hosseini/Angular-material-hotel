@@ -22,22 +22,37 @@
 
  -->
 
+<div class="row justify-content-center">
+  <div class="col-sm-8">
+    <div class="mt-2">
+      <!-- <mat-button-toggle-group [(ngModel)]="fontstyle">
+         <mat-button-toggle [routerLink]="['air']" value="بلیط هواپیما"> <span>بلیط هواپیما</span> </mat-button-toggle>
+         <mat-button-toggle value="رزرو هتل"><span>رزرو هتل</span></mat-button-toggle>
+       </mat-button-toggle-group>
+      <p>بهترین هتل هارو از ما بخواهید {{fontstyle}}</p> -->
+      <mat-tab-group mat-align-tabs="center" contentTabIndex="3">
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="icon">flight</mat-icon>
+            بلیط هواپیما
+          </ng-template>
+          <div class="ml-2 p-3 ">
+            <app-buyair></app-buyair>
+          </div>
+        </mat-tab>
 
- <div class="row align-items-center">
-   <div class="col-sm-4">
-    <mat-form-field appearance="fill">
-      <mat-label>Action</mat-label>
-      <input type="text" matInput value="بهترین هتل هارو انتخاب کن عزیز..." #message>
-    </mat-form-field>
-   </div>
-   <div class="col-sm-4">
-    <mat-form-field appearance="fill">
-      <mat-label>Action</mat-label>
-      <input type="text" matInput value="esafar" #action>
-    </mat-form-field>
-   </div>
-   <div class="col-sm-4">
-    <button mat-stroked-button (click)="openSnackBar(message.value, action.value)">click</button>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="icon">hotel</mat-icon>
+            رزروهتل
+          </ng-template>
+          <div class="ml-5 p-3 ">
+            <app-buyair></app-buyair>
+          </div>
+        </mat-tab>
 
-   </div>
- </div>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>
+<!-- <router-outlet></router-outlet> -->

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-tabest',
@@ -8,13 +7,11 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class TabestComponent implements OnInit {
 
-  constructor(private snackBar:MatSnackBar) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
+fontstyle?:string;
 
-  openSnackBar(message:string,action:string){
-    return this.snackBar.open(message,action)
-  }
 
 }

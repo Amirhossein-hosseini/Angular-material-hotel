@@ -1,0 +1,19 @@
+<!-- <form [formGroup]="state" (ngSubmit)="openSnackBar()">
+        <mat-form-field appearance="fill">
+          <mat-label>مقصد</mat-label>
+          <input type="text" matInput formControlName="nameCoutry"  [matAutocomplete]="autoGroup">
+          <mat-autocomplete #autoGroup="matAutocomplete">
+            <mat-optgroup *ngFor="let group of stateGroupsOption|async" [label]="group.letter">
+
+              <mat-option *ngFor="let name of group.names" [value]="name">
+
+                {{name}}
+
+              </mat-option>
+
+            </mat-optgroup>
+          </mat-autocomplete>
+
+        </mat-form-field>
+        <button mat-button>click</button>
+      </form> -->

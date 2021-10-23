@@ -7,18 +7,23 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeHotelComponent } from './home-hotel/home-hotel.component';
 import { TabestComponent } from './tabest/tabest.component';
+import { BuyairComponent } from './buyair/buyair.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeHotelComponent,
-    TabestComponent
+    TabestComponent,
+    BuyairComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModules
+    MaterialModules,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

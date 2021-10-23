@@ -1,0 +1,31 @@
+<div class="row justify-content-center">
+  <div class="col-sm-6">
+    <div class="mt-3 M-3">
+      <mat-form-field appearance="fill">
+        <mat-label>Action</mat-label>
+        <input type="text" matInput value="بهترین هتل هارو انتخاب کن عزیز..." #message>
+      </mat-form-field>
+
+
+
+    </div>
+
+
+  </div>
+  <div class="col-sm-2">
+    <div class="mt-3 ml-33">
+      <mat-form-field appearance="fill">
+        <mat-label>Action</mat-label>
+        <input type="text" matInput value="esafar" #action>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="col-sm-2">
+    <div class="mt-3 py-3 ml-55">
+      <button class=" px-lg-2 w-100" mat-stroked-button (click)="openSnackBar(message.value,action.value)">click</button>
+    </div>
+
+  </div>
+
+</div>

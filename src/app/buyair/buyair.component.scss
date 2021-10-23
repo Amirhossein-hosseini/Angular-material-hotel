@@ -1,0 +1,23 @@
+.btns {
+  width: 7rem;
+  height: 3rem;
+  margin-top: -1rem;
+}
+
+
+
+
+
+@media screen and(min-width:1200px) {
+  .M-3 {
+    margin-left: -6rem;
+  }
+
+  .col-sm-2>.ml-55 {
+    margin-left: 5rem !important;
+  }
+
+  .col-sm-2>.ml-33 {
+    margin-left: -1rem !important;
+  }
+}

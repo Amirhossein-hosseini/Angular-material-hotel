@@ -9,8 +9,10 @@ import {MatSidenavModule} from '@angular/material/sidenav'
 import {MatListModule} from '@angular/material/list'
 import {MatButtonModule} from '@angular/material/button'
 import {MatStepperModule} from '@angular/material/stepper'
-
 import {MatSnackBarModule} from '@angular/material/snack-bar'
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatTabsModule} from '@angular/material/tabs'
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 const Model = [
 MatCardModule,
@@ -22,7 +24,10 @@ MatSidenavModule,
 MatListModule,
 MatButtonModule,
 MatStepperModule,
-MatSnackBarModule
+MatSnackBarModule,
+MatButtonToggleModule,
+MatTabsModule,
+MatAutocompleteModule
 
 ]
 
