@@ -10,12 +10,14 @@ const routes: Routes = [
   {
     path:'',component:HomeHotelComponent
   },
-  {
-    path:'tabest',component:TabestComponent
-  },
+
   {
     path:'air',component:BuyairComponent
+  },
+  {
+    path:'tabest',component:TabestComponent
   }
+
 ];
 
 @NgModule({

@@ -79,7 +79,7 @@ export class BuyairComponent implements OnInit {
   constructor(private snackBar:MatSnackBar,private _formBuilder:FormBuilder) { }
 
   state:FormGroup = this._formBuilder.group({
-    nameCoutry:['',Validators.maxLength(10),Validators.required]
+    nameCoutry:''
   })
 
   ngOnInit(): void {

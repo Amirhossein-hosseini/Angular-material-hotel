@@ -1,27 +1,3 @@
-<!-- <div class="container">
-    <div class=" flex-item ">
-      <mat-form-field appearance="fill">
-        <mat-label>message</mat-label>
-        <input type="text" matInput value="بهترین هتل هارو انتخاب کن عزیز..." #message>
-      </mat-form-field>
-    </div>
-    <div class=" mt-4 flex-item">
-      <mat-form-field appearance="fill">
-        <mat-label>Action</mat-label>
-        <input type="text" matInput value="esafar" #action>
-      </mat-form-field>
-
-
-    </div>
-    <div class="flex-items">
-      <button mat-stroked-button (click)="openSnackBar(message.value, action.value)">click</button>
-
-    </div>
-
-  </div>
-
- -->
-
 <div class="row justify-content-center">
   <div class="col-sm-8">
     <div class="mt-2">
@@ -31,25 +7,30 @@
        </mat-button-toggle-group>
       <p>بهترین هتل هارو از ما بخواهید {{fontstyle}}</p> -->
       <mat-tab-group mat-align-tabs="center" contentTabIndex="3">
-        <mat-tab>
-          <ng-template mat-tab-label>
-            <mat-icon class="icon">flight</mat-icon>
-            بلیط هواپیما
-          </ng-template>
-          <div class="ml-2 p-3 ">
-            <app-buyair></app-buyair>
-          </div>
-        </mat-tab>
+        <div class="col-sm-4">
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <mat-icon class="icon">flight</mat-icon>
+              بلیط هواپیما
+            </ng-template>
+            <div class="ml-2 p-3 ">
+              <app-buyair></app-buyair>
+            </div>
+          </mat-tab>
+        </div>
 
-        <mat-tab>
-          <ng-template mat-tab-label>
-            <mat-icon class="icon">hotel</mat-icon>
-            رزروهتل
-          </ng-template>
-          <div class="ml-5 p-3 ">
-            <app-buyair></app-buyair>
-          </div>
-        </mat-tab>
+        <div class="col-sm-4">
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <mat-icon class="icon">hotel</mat-icon>
+              رزروهتل
+            </ng-template>
+            <div class="ml-5 p-3 ">
+              <app-buyair></app-buyair>
+            </div>
+          </mat-tab>
+        </div>
+
 
       </mat-tab-group>
     </div>
