@@ -9,6 +9,7 @@ import { HomeHotelComponent } from './home-hotel/home-hotel.component';
 import { TabestComponent } from './tabest/tabest.component';
 import { BuyairComponent } from './buyair/buyair.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CountryService } from './buyair/country.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [CountryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
